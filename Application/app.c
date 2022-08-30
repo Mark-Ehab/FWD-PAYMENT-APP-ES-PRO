@@ -16,20 +16,20 @@
 
 void appStart(void)
 {
-    uint8_t repeat = 'f';
+    uint8_t repeat = '\0';
     EN_transState_t trans_status;
 	ST_transaction_t trans_data;
 	while(setMaxAmount(&trans_data.terminalData) == INVALID_MAX_AMOUNT)
     {
     	printf("Sorry,maximum amount must be greater than 0\n");
     }
+    /*
+     Read the new line character stored in input buffer after scanf is ended to avoid
+     being read by another following scanf that may cause a bug in the program.
+     */
+    newLineChar = getchar();
 	do
     {
-        /*
-        Read the new line character stored in input buffer after scanf is ended to avoid
-        being read by another following scanf that may cause a bug in the program.
-        */
-        newLineChar = getchar();
     	while (getCardHolderName(&trans_data.cardHolderData) == WRONG_NAME)
     	{
     		printf("Wrong Name!\n");
