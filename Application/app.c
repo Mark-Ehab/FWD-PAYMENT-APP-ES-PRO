@@ -91,6 +91,11 @@ void appStart(void)
         newLineChar = getchar();
         printf("Enter f to finish the process or any other key to proceed a new transaction: ");
         scanf("%c",&repeat);
+        /*
+        Read the new line character stored in input buffer after scanf is ended to avoid
+        being read by another following scanf that may cause a bug in the program.
+        */
+        newLineChar = getchar();
     } while (repeat != 'f');
 
 }
