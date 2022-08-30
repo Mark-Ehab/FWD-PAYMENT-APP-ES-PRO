@@ -35,6 +35,7 @@ EN_terminalError_t getTransactionDate(ST_terminalData_t *termData)
     mon  = sysDate->tm_mon+1;      // Add 1 to month offset to get the right month
     year = sysDate->tm_year+1900;  // Add 1900 to years offset to get the right year
 
+    /* Set transaction date on the format DD/MM/YY */
     for (uint8_t dateFormatCounter = 0; dateFormatCounter < 10; dateFormatCounter++)
     {
         if (dateFormatCounter == 0 || dateFormatCounter == 1)
