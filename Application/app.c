@@ -61,6 +61,11 @@ void appStart(void)
     	if(isBelowMaxAmount(&trans_data.terminalData) == EXCEED_MAX_AMOUNT)
     	{
     		printf("Transaction Declined !, amount exceeding limit!\n");
+            /*
+            Read the new line character stored in input buffer after scanf is ended to avoid
+            being read by another following scanf that may cause a bug in the program.
+            */
+            newLineChar = getchar();
     		continue;
     	}
 
