@@ -38,7 +38,7 @@ EN_transState_t recieveTransactionData(ST_transaction_t *transData)
 
     if (isAmountAvailable(&transData->terminalData) == LOW_BALANCE)
     {
-		status = DECLINED_INSUFFECIENT_FUND;
+        // Error status remains DECLINED_INSUFFECIENT_FUND
     }
     
 	else
