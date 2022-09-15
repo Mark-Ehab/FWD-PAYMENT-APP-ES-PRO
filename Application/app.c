@@ -73,8 +73,12 @@ void appStart(void)
 
         switch (trans_status)
         {
-            case DECLINED_STOLEN_CARD:
+            case FRAUD_CARD:
                 printf("Access Declined !, invalid account\n");
+                break;
+
+            case DECLINED_STOLEN_CARD:
+                printf("Transaction Declined !, account is blocked !\n");
                 break;
 
             case DECLINED_INSUFFECIENT_FUND:
