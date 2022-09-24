@@ -1,4 +1,0 @@
-﻿  server.c
-C:\Users\Mark\Desktop\FWD-PAYMENT-APP-ES\FWD-PAYMENT-APP-ES\Server\server.c(54,38): warning C4047: 'function': 'ST_transaction_t *' differs in levels of indirection from 'ST_transaction_t **'
-C:\Users\Mark\Desktop\FWD-PAYMENT-APP-ES\FWD-PAYMENT-APP-ES\Server\server.c(54,28): warning C4024: 'saveTransaction': different types for formal and actual parameter 1
-  FWD-PAYMENT-APP-ES.vcxproj -> C:\Users\Mark\Desktop\FWD-PAYMENT-APP-ES\x64\Debug\FWD-PAYMENT-APP-ES.exe
